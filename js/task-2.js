@@ -24,3 +24,23 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+//отримую контейнер галереї
+const gallery = document.querySelector('.gallery');
+console.log(gallery); 
+
+//створюю порожній рядок для зберігання розмітки
+let galleryHTML = '';
+
+// Перебираю масив зображень за допомогою forEach
+images.forEach(image => {
+
+  // метод проходить по кожному елементу img і создає для нього html розмітку,також під кожний img додаеться alt,і створюється тег li.І все це записується в змінну galleryHTML. 
+  galleryHTML += `
+  <li class="gallery-item">
+   
+  <img src="${image.url}" alt="${image.alt}" class="gallery-image">`;
+});
+
+//після того коли всі елементи створені додаємо іх в контейнер галереї
+gallery.insertAdjacentHTML('beforeend', galleryHTML)
