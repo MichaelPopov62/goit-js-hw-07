@@ -1,3 +1,4 @@
+'use strict';
 const images = [
   {
     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
@@ -25,22 +26,26 @@ const images = [
   }
 ];
 
-//отримую контейнер галереї
-const gallery = document.querySelector('.gallery');
-console.log(gallery); 
+//використовую метод та отримую контейнер галереї за классом (.gallery)
+  const gallery = document.querySelector('.gallery');
+  console.log(gallery); 
 
 //створюю порожній рядок для зберігання розмітки
-let galleryHTML = '';
+  let galleryHTML = '';
 
-// Перебираю масив зображень за допомогою forEach
-images.forEach(image => {
+// Переби раю масив зображень за допомогою forEach
+  images.forEach(image => {
 
   // метод проходить по кожному елементу img і создає для нього html розмітку,також під кожний img додаеться alt,і створюється тег li.І все це записується в змінну galleryHTML. 
   galleryHTML += `
   <li class="gallery-item">
-   
-  <img src="${image.url}" alt="${image.alt}" class="gallery-image">`;
-});
+   <img src="${image.url}" alt="${image.alt}" class="gallery-image">;
+  </li>`;
+  });
+//дивлюсь на результат
+console.log(galleryHTML);
 
 //після того коли всі елементи створені додаємо іх в контейнер галереї
 gallery.insertAdjacentHTML('beforeend', galleryHTML)
+//перевіряю чи все вірно створилось
+ console.log(gallery);

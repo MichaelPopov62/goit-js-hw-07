@@ -12,55 +12,66 @@ body {
   color: #212121;
   line-height: 1.5;
 }
-a{text-decoration: none;}
 
-ul{
+a {
+  text-decoration: none;
+}
+
+ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-h2{margin: 0;}
-  ul li:last-child {
-      margin-bottom: 0; /* Скидає відступ для останнього елемента кожного списку */
-    }
 
-.text{
-  padding-left: 40px;} 
+h2 {
+  margin: 0;
+}
 
-.categories-list{
+ul li:last-child {
+  margin-bottom: 0;
+  /* Скидає відступ для останнього елемента кожного списку */
+}
+/*task-1*/
+.text {
+  padding-left: 40px;
+}
+
+.categories-list {
   border-radius: 8px;
   width: 440px;
   padding: 24px;
-  }
+}
 
 .item-animals-total,
 .item-products-total,
-.item-technologies-total{
+.item-technologies-total {
   border-radius: 8px;
   width: 392px;
   height: 264px;
   margin-bottom: 24px;
-  }
+}
 
- .item-products-total{
+.item-products-total {
   width: 392px;
   height: 216px;
-} 
-.item-technologies-total{
+}
+
+.item-technologies-total {
   width: 392px;
   height: 312px;
 }
-.animals-list,
-.products-list,
-.technologies-list {
+
+.list-animals,
+.list-products,
+.list-technologies {
   border-radius: 8px;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 16px;
 
- }
+}
 
-.title{
+.title {
   font-weight: 600;
   font-size: 24px;
   line-height: 133%;
@@ -71,10 +82,9 @@ h2{margin: 0;}
   padding-bottom: 16px;
 }
 
-.animals-item,
-.products-item,
-.technologies-item 
-{
+.item-animals,
+.item-products,
+.item-technologies {
   border: 1px solid #808080;
   border-radius: 4px;
   width: 360px;
@@ -83,34 +93,157 @@ h2{margin: 0;}
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color:#2e2f42;;
+  color: #2e2f42;
+  ;
   padding-top: 8px;
   padding-left: 16px;
   padding-bottom: 8px;
   margin-bottom: 8px;
-  
+
 }
- .gallery {
+
+/*task-2*/
+.gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   list-style: none;
   margin: 0;
   padding: 0;
-}
+  width: 1440px;
+  justify-content: center;
 
-.gallery-item {
-  display: flex;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis:250px;
-  
- 
 }
 
 .gallery-image {
-  width: 100%;
-  height: auto;
+  max-width: 360px;
   border-radius: 8px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 250px;
+}
 
-} 
+/*task-3*/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+
+}
+
+.input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  opacity: 1;
+}
+
+.title-greet {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  align-self: flex-start;
+
+}
+
+.span {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+
+}
+
+/*task-4*/
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.login-form input {
+  width: 360px;
+  height: 40px;
+  margin-top: 5px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+}
+
+.button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 86px;
+  height: 40px;
+  background: #4e75ff;
+
+}
+
+/*task-5*/
+.widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border-radius: 8px;
+  padding: 100px 88px;
+  width: 345px;
+  height: 280px;
+  background: #fff;
+
+}
+
+.title-widget {
+  width: 169px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin: 0;
+  padding-left: 20px;
+
+}
+
+.change-color {
+  display: block;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 148px;
+  height: 40px;
+  background: #4e75ff;
+  color: #fff
+}
+
+.color {
+  color: #f91504;
+  font-weight: bold;
+}
